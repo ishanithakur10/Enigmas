@@ -1,0 +1,51 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: sans-serif;
+  background: url(bg.png);
+  background-size: cover;
+  height: 100vh;
+}
+#clickMeLink{
+  font-size: x-large;
+  letter-spacing: 0cap;
+  /* align-items: center; */
+}
+.container{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.container img{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: contain;
+}
+
+.container h2{
+  z-index: 1;  /* for not overlapping */
+  color: #fff;
+  font-size: 90px;
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: 32px;
+  line-height: 60px;
+}
+
+.container h2 span{
+  font-size: 48px;
+  font-weight: 500;
+  letter-spacing: 10px;
+}

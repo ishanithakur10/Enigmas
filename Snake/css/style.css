@@ -1,0 +1,51 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+#sc{
+    position:absolute;
+    top: 9px;
+    right:200px;
+    font-size: 40px;
+    font-weight: bold;
+}
+#highsc{
+    position:absolute;
+    top: 60px;
+    right:115px;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+
+.body {
+    background: url("../green-screen-with-simple-design-free-photo.jpg");
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.board{
+    background: linear-gradient(rgb(218, 244, 168),rgb(141, 236, 141));
+    width: 98vmin;
+    height: 92vmin;
+    border: 5px solid black;
+    display: grid;
+    grid-template-rows: repeat(18,1fr);
+    grid-template-columns: repeat(18,1fr);
+}
+.snake{
+    background-color: rgb(222, 22, 22);
+    border-radius: 12px;
+}
+
+.head{
+    background-color:rgb(249, 74, 10);
+    border-radius: 7px;
+}
+.food{
+    background-color: rgb(30, 189, 35); 
+    border-radius:12px;
+}

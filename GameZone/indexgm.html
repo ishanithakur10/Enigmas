@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Zone</title>
+    <link rel="stylesheet" href="stylegm.css">
+    <link rel="icon" href="elephant.png">
+  </head>
+  <body>
+
+    <div class="container">
+      <h2 class="object" data-value="3">
+        &nbsp; Game Zone<br><center>
+        <a id="clickMeLink" class="event" href="/Games/indexm.html">click me</a>
+      </center>
+      </h2>
+      
+      <img src="green1.png" class="object" data-value="-2" alt="">
+      <img src="purple2.png" class="object" data-value="6" alt="">
+      <img src="pathar3.png" class="object" data-value="4" alt="">
+      <img src="yellow4.png" class="object" data-value="-6" alt="">
+      <img src="udta5.png" class="object" data-value="8" alt="">
+      <img src="gem6.png" class="object" data-value="-4" alt="">
+      <img src="ufo7.png" class="object" data-value="5" alt="">
+      <img src="chotu8.png" class="object" data-value="-9" alt="">
+      <img src="jupiter9.png" class="object" data-value="-5" alt="">
+    </div>
+
+
+    <script type="text/javascript">
+    document.addEventListener("mousemove", parallax);
+    
+    function parallax(e){
+      document.querySelectorAll(".object").forEach(function(obj){
+
+        var moving_value = obj.getAttribute("data-value");
+        var x = (e.clientX *2* moving_value) / 250;
+        var y = (e.clientY *2* moving_value) / 250;
+
+        obj.style.transform = "translateX(" + x + "px) translateY(" + y + "px)";
+      });
+    }
+    </script>
+
+  </body>
+</html>

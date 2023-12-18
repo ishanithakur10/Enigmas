@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.scene{
+    background: #000;
+    overflow: hidden;
+    background-image: 
+    radial-gradient(circle at 65% 60%, #420a50 0%, #580e7500 45%),
+    radial-gradient(circle at 40% 60%, #076066 0%, #17777700 45%);
+    background-blend-mode: screen; 
+    height: 100vh;
+    width: 100%;
+    perspective: 10vmin;
+}
+
+.scene div{
+    width: 1.5vmin;
+    height: 1.5vmin;
+    transform: 
+    translateZ(-100vmin)
+    rotateY(90deg)
+    rotateX(var(--rx))
+    translateZ(var(--x))
+    scaleX(1);    /*resetig its position -> does not move*/
+    animation:  animate 1.5s infinite ease-in;
+    background: #fff;
+    box-shadow: 0 0 20px rgb(10, 239, 255);
+}
+
+.game-cards{
+    background: #000;
+    background-image: 
+    radial-gradient(circle at 65% 60%, #420a50 0%, #580e7500 45%),
+    radial-gradient(circle at 40% 60%, #076066 0%, #17777700 45%);
+    background-blend-mode: screen;
+    height:max-content;
+    width:auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.card{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,.125);
+    margin: 20.25rem;
+    height: 40px;
+    width: 80px;
+}
+
+@keyframes animate {
+    0%, 90%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        transform: 
+        rotateY(90deg)
+        rotateX(var(--rx))
+        translateZ(var(--x))
+        scaleX(6); /*making it wider than vh*/
+    }
+}
